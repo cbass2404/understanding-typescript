@@ -14,8 +14,15 @@ _To start your live server for seeing updates to index.html and the app.js file 
 $ npm start
 ```
 
-_To have app.ts file watched and auto compiled on save use:_
+_To have a file watched and auto compiled on save use:_
 
 ```
-$ tsc app.js -w
+$ tsc fileName.js -w
+```
+
+_To have the entire project watched for changes use:_
+
+```
+$ tsc --init
+$ tsc -w
 ```
