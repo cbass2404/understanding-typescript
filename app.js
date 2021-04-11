@@ -1,33 +1,18 @@
-// const person: {
-//     name: string;
-//     age: number;
-//     hobbies: string[];
-//     role: [number, string];
-// } = {
-//     name: 'Cory',
-//     age: 33,
-//     hobbies: ['Sports', 'Cooking'],
-//     role: [2, 'author']
-// };
-var Role;
-(function (Role) {
-    Role[(Role["ADMIN"] = 0)] = "ADMIN";
-    Role[(Role["READ_ONLY"] = 1)] = "READ_ONLY";
-    Role[(Role["AUTHOR"] = 2)] = "AUTHOR";
-})(Role || (Role = {}));
-var person = {
-    name: "Cory",
-    age: 33,
-    hobbies: ["Sports", "Cooking"],
-    role: Role.ADMIN,
+var combine = function (input1, input2, resultType) {
+    var result;
+    if ((typeof input1 === "number" && typeof input2 === "number") ||
+        resultType === "as-number") {
+        result = +input1 + +input2;
+        return +result;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+        return result.toString();
+    }
 };
-var favoriteActivities;
-favoriteActivities = ["Sports"];
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
-}
-if (Role.ADMIN === person.role) {
-    console.log("IS ADMIN");
-}
+var combinedAges = combine(30, 26, "as-number");
+console.log(combinedAges);
+var combinedStringAges = combine(30, 26, "as-text");
+console.log(combinedStringAges);
+var combinedNames = combine("Max", "Anna", "as-text");
+console.log(combinedNames);
