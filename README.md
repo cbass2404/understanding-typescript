@@ -20,17 +20,16 @@ _To have a file watched and auto compiled on save use:_
 $ tsc fileName.js -w
 ```
 
-_To have the entire project watched for changes use:_
-
-```
-$ tsc --init
-$ tsc -w
-```
-
 ### tsconfig.json instructions
 
 ```
 $ tsc --init
+```
+
+_To have the entire project watched for changes use:_
+
+```
+$ tsc -w
 ```
 
 > Initialized the tsconfig.json file. Further, you can add 'include', 'exclude', 'files' to customize what you are directing the tsc compiler to handle.
